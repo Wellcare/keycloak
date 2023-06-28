@@ -6,6 +6,7 @@ USER root
 RUN apt-get update && \
     apt-get install -y curl
 
+RUN printenv
 # Install jbcrypt module
 RUN curl https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar > /tmp/jbcrypt-0.4.jar && \
     $KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=org.mindrot.jbcrypt --resources=/tmp/jbcrypt-0.4.jar"
