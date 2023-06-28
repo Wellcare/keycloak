@@ -18,7 +18,7 @@ steps:
         - push
         - tag
 
-  - name: publish
+  - name: publish branch tag
     image: plugins/docker
     settings:
       repo: mhealthvn/${DRONE_REPO_NAME}
@@ -32,3 +32,19 @@ steps:
       event:
         - push
         - tag
+        
+  - name: publish version tag
+    image: plugins/docker
+    settings:
+      repo: mhealthvn/${DRONE_REPO_NAME}
+      tags: ${DRONE_TAG##v}
+    environment:
+      DOCKER_USERNAME:
+        from_secret: docker_username
+      DOCKER_PASSWORD:
+        from_secret: docker_password
+    when:
+      event:
+        - push
+        - tag
+        
