@@ -8,8 +8,6 @@ steps:
     settings:
       repo: mhealthvn/${DRONE_REPO_NAME}
       tags: ${DRONE_BRANCH}
-      build_args:
-        - KEYCLOAK_VERSION=14.0.0
     environment:
       DOCKER_USERNAME:
         from_secret: docker_username
