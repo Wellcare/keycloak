@@ -6,6 +6,8 @@ USER root
 RUN apt-get update && \
     apt-get install -y curl
 
+ENV KEYCLOAK_HOME=/opt/bitnami/keycloak
+
 # Install keycloak-bcrypt plugin
 RUN curl -L https://github.com/leroyguillaume/keycloak-bcrypt/releases/download/1.5.3/keycloak-bcrypt-1.5.3.jar > $KEYCLOAK_HOME/standalone/deployments/keycloak-bcrypt-1.5.3.jar
 
