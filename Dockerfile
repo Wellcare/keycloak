@@ -1,4 +1,4 @@
-FROM bitnami/keycloak:21.4.3
+FROM bitnami/keycloak:24.0.5
 
 USER root
 
