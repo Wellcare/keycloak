@@ -13,6 +13,13 @@ services:
       - DB_DATABASE=keycloak
       - DB_USER=keycloak
       - DB_PASSWORD=keycloak
+      - KK_TO_RMQ_URL=localhost
+      - KK_TO_RMQ_PORT=5672
+      - KK_TO_RMQ_EXCHANGE=Keycloak
+      - KK_TO_RMQ_USERNAME=admin
+      - KK_TO_RMQ_PASSWORD=admin
+      - KK_TO_RMQ_USE_TLS=false
+
     ports:
       - "8080:8080"
     depends_on:
