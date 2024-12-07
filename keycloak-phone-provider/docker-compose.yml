@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  app:
+    image: mhealthvn/keycloak-phone-provider
+    build: ./
+    hostname: keycloak-phone-provider
+    working_dir: '/usr/keycloak'
+    volumes:
+      - ./target:/target
+    command: cp -r ./target /
