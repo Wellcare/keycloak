@@ -10,9 +10,9 @@ steps:
       tags: ${DRONE_BRANCH}
     environment:
       DOCKER_USERNAME:
-        from_secret: docker_username
+        from_secret: DOCKER_USERNAME
       DOCKER_PASSWORD:
-        from_secret: docker_password
+        from_secret: DOCKER_PASSWORD
     when:
       event:
         - push
@@ -25,9 +25,9 @@ steps:
       tags: ${DRONE_BRANCH}
     environment:
       DOCKER_USERNAME:
-        from_secret: docker_username
+        from_secret: DOCKER_USERNAME
       DOCKER_PASSWORD:
-        from_secret: docker_password
+        from_secret: DOCKER_PASSWORD
     when:
       event:
         - push
@@ -40,9 +40,9 @@ steps:
       tags: ${DRONE_TAG##v}
     environment:
       DOCKER_USERNAME:
-        from_secret: docker_username
+        from_secret: DOCKER_USERNAME
       DOCKER_PASSWORD:
-        from_secret: docker_password
+        from_secret: DOCKER_PASSWORD
     when:
       event:
         - push
