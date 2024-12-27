@@ -4,7 +4,7 @@ name: build-and-publish
 
 steps:
   - name: build
-    image: plugins/docker
+    image: plugins/docker:20.18.5
     settings:
       repo: mhealthvn/${DRONE_REPO_NAME}
       tags: ${DRONE_BRANCH}
@@ -19,7 +19,7 @@ steps:
         - tag
 
   - name: publish branch tag
-    image: plugins/docker
+    image: plugins/docker:20.18.5
     settings:
       repo: mhealthvn/${DRONE_REPO_NAME}
       tags: ${DRONE_BRANCH}
@@ -34,7 +34,7 @@ steps:
         - tag
         
   - name: publish version tag
-    image: plugins/docker
+    image: plugins/docker:20.18.5
     settings:
       repo: mhealthvn/${DRONE_REPO_NAME}
       tags: ${DRONE_TAG##v}
