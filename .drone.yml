@@ -29,6 +29,9 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     when:
+      branch:
+        - sandbox
+        - main
       event:
         - push
         - tag
@@ -44,6 +47,9 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     when:
+      branch:
+        - sandbox
+        - main
       event:
         - push
         - tag
