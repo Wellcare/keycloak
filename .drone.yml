@@ -14,6 +14,9 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     when:
+      branch:
+        - sandbox
+        - main
       event:
         - push
         - tag
@@ -31,10 +34,8 @@ steps:
     when:
       branch:
         - sandbox
-        - main
       event:
         - push
-        - tag
         
   - name: publish version tag
     image: plugins/docker:20.18.5
@@ -48,9 +49,7 @@ steps:
         from_secret: DOCKER_PASSWORD
     when:
       branch:
-        - sandbox
         - main
       event:
-        - push
         - tag
         
