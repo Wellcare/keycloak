@@ -1,4 +1,4 @@
-FROM bitnami/keycloak:26.0.6
+FROM bitnami/keycloak:26.1.0
 
 USER 1001
 
