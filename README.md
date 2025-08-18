@@ -183,13 +183,6 @@ Enable the Wellcare theme in Keycloak Admin Console:
 2. Set Login Theme to "wellcare"
 3. Set Account Theme to "wellcare"
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## 📝 License
 Internal use only. Not licensed for external distribution or third-party use.
