@@ -191,14 +191,5 @@ Enable the Wellcare theme in Keycloak Admin Console:
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Support
-
-For support and questions:
-
-- Create an issue in the repository
-- Contact the development team
-- Check the Keycloak documentation for general Keycloak questions
+## 📝 License
+Internal use only. Not licensed for external distribution or third-party use.
